@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coding Point Home page</title>
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+ 
+  <style>
+    .container{
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grey+Qo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="nav">
+    <li class="li" id="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="" id="logoimg"
+        style="width:50px; height:50px; border-radius: 50%;"> </li>
+        <div class="textlogo"><strong>Coding Point</strong></div>
+    <ul>
+      <li id="profile"> <a href="/profile"><img src="{{ url_for('static', filename='images/profile.png')}}" alt=""
+            id="profile"></a></li>
+      <li class="nav-link"> <a href="/" id="li">Home</a></li>
+      <li class="nav-link"> <a href="/courses" id="li">Courses</a></li>
+      <li class="nav-link"> <a href="/aboutus" id="li">About us</a></li>
+    </ul>
+    <div class="btn">
+      <li class="option-btn li"><a href="/login" id="btn">Login</a> </li>
+      <li class="option-btn li"><a href="/Signup" id="btn">Signup</a></li>
+      <li class="option-btn li"><a href="/adminpanel" id="btn">Admin</a></li>
+    </div>
+   <a href="/logout"><img src="{{ url_for('static', filename='images/logout.png')}}" alt=""
+      id="logout" style="margin-right: 100px;"></a>
+  </div>
+
+
+  
+  <h1 id="welcome">Welcome to Coding Point</h1>
+  <h1 id="start">start your courier journey with us now..!</h1>
+  <div class="trunk">
+    <img src="{{ url_for('static', filename='images/hig1.png')}}" alt="" id="himg">
+    <img src="{{ url_for('static', filename='images/hig2.png')}}" alt="" id="himg">
+    <label id="letsgo">Lest's Go..</label>
+
+  </div>
+
+  
+
+
+
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</html>

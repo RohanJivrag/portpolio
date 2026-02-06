@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #proimg{
+            position: relative;
+            /* right: 100px; */
+            margin-top:-220px;
+            margin-left: -300px;
+            border: 2px solid black;
+        }
+        .card-body{
+            margin-left: 50%;           
+        }
+        .card-body2{
+            margin-left:5%;           
+        }
+        .card-header{ background-color: bisque;}
+        body{
+            background-color: rgb(135, 213, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-3">User Profile </h1>
+        <div class="card">
+            <div class="card-header">
+                Profile Information   
+            </div>
+            <div class="card-body" >
+                <p><strong>Name:</strong> {{ user.name }}</p>
+                <p><strong>Username:</strong> {{ user.username }}</p>
+                <p><strong>Email:</strong> {{ user.email }}</p>
+                <p><strong>Contact:</strong> {{ user.contact }}</p>
+                <p><strong>Date of Birth:</strong> {{ user.dob }}</p>
+                {% if user.profilepic %}
+                    <img id="proimg" src="data:image/png;base64,{{ user.profilepic | b64encode }}" alt="Profile Picture" style="width: 200px; height: 200px; border-radius: 50%;">
+                </p>
+                {% else %}
+                <p><strong>Profile Picture:</strong> Not uploaded</p>
+                {% endif %}
+            </div>
+    
+        <div class="card">
+            <div class="card-header">
+                Your Courses
+            </div>
+            <br>
+            <div class="card-body2" >
+                {% if courses!="" %}
+                {% for course in courses %}
+                <!-- <p><strong>Name:</strong> {{ user.name }}</p> -->
+                <p><strong>Coursename:</strong> {{ course.course_name }}</p>
+                <p><strong>Course Price:</strong> {{ course.course_price }}</p>
+                <p><strong>Purchase Date:</strong> {{ course.course_purchase_date }}</p>
+                <p><strong>Status:</strong> {{ course.course_status }}</p>
+                <hr>
+                {% endfor %}
+                {% else %}
+                    <p style="font-size: 30px;">You didn't have any course...</p>
+                    <p style="font-size: 25px;">Buy a course now </p> <a href="/courses" class="btn btn-danger mt-3" style="margin-bottom:10px;">By Click here</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="card-header">
+            <a href="{{ url_for('home') }}" class="btn btn-primary mt-4 " style="margin-left: 50%;">Home</a>
+        </div>
+       
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

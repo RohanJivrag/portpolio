@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+
+  <!-- <link rel="stylesheet" href="style.css">   -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  link
+</head>
+
+<body>
+  <img src="./static/images/blues.jpg" alt="" id="blue">
+  <form class="login" action="/newuser" method="post" enctype="multipart/form-data">
+    <!-- <div class="profile"></div> -->
+    <img src="./static/images/logo.png" alt="" class="profile">
+    <div class="elements">
+        <div class="login-left">
+          <label for="name">Name</label>
+          <label for="email">Email</label>
+          <label for="mobile">Mobile</label>
+          <label for="dob">D.O.B</label>
+          <label for="username">Username</label>
+          <label for="password">Password</label>
+          <label for="uploadpic">Picture</label>
+      
+          <!-- <label for="img">Your Photo</label>  -->
+        </div>
+
+        <div class="login-right">
+          <input type="text" id="name" name="name" >
+          <input type="email" id="email" name="email" >
+          <input type="tel" id="mobile" name="contact"  pattern="[0-9]{10}">
+          <input type="date" id="dob" name="dob" >
+          <input type="text" id="username" name="username" >
+          <input type="password" id="password" name="password" >
+          <input type="file" name="uploadpic" id="uploadpic">
+          <!-- <input type="file" id="img" name="filename" name="" required> -->
+
+        </div>
+
+      
+    </div>
+    <button id="login-btn" type="submit">Login</button>
+    <a href="/login" style="color: white; text-decoration: none;">Already have an account..?</a>
+
+
+
+  </form>
+</body>
+
+</html>

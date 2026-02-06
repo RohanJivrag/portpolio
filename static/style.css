@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    height: 100vh;  
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:  #ffffff;
+}
+.login{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;  
+    align-items: center;  
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 5px 5px 15px 12px rgb(0, 0, 0);
+}
+ .elements{
+    height: 300px;
+    width: 440px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin-top: 50px;  
+    align-items: center;  
+    /* border: 2px solid rgb(1, 26, 255); */
+}
+
+.login-left{
+    display: flex;
+    flex-direction: column;
+
+    width: 250px;
+    height:300px;
+    /* border: 2px  solid black; */
+    font-size:30px;
+    justify-content:space-between;
+
+}
+.login-right{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 300px;
+    height:300px;
+    size: 100px;
+} 
+input{
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 25px;
+    /* border: 2px solid red; */
+    text-align: center;
+}
+ .profile{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-style: solid;
+    border-color:rgb(209, 94, 94);
+    top:68px;
+    /* border-bottom-color: rgba(240, 248, 255, 0);
+    border-right-color: rgba(240, 248, 255, 0); */
+    background-image: url("./static/images/logo.png");
+    background-size: cover;
+}
+
+#login-btn{
+width: 440px;
+height: 30px;
+margin: 20px ;
+border-radius: 7px;
+background-color:orangered;
+font-size: 20px;
+color: white;
+}
+
+
+#blue{
+    position: absolute;
+    z-index: -1;
+}

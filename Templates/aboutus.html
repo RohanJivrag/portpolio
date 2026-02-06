@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Coding Point Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #97dcff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            height: 100px;
+            text-align: center;
+            padding: 50px 0;
+            /* background-color: #333; */
+            /* background-color: #333; */
+            color: #fff;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .header p {
+            font-size: 1.2em;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .panel {
+            background-color: rgb(252, 254, 227);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            flex: 1 1 calc(33% - 40px);
+            box-sizing: border-box;
+        }
+        .panel h2 {
+            margin-top: 0;
+        }
+        .panel p {
+            color: #555;
+        }
+        .team {
+            text-align: center;
+            margin: 50px 0;
+           
+        }
+        .team h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .team .member {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        .team .member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .team .member h3 {
+            margin: 10px 0 5px;
+        }
+        .team .member p {
+            margin: 0;
+            color: #17465e;
+        }
+    </style>
+      <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grey+Qo&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="nav">
+        <li class="li" id="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="" id="logoimg"
+            style="width:50px; height:50px; border-radius: 50%;"> </li>
+            <div class="textlogo"><strong>Coding Point</strong></div>
+        <ul>
+          <li id="profile"> <a href="/profile"><img src="{{ url_for('static', filename='images/profile.png')}}" alt=""
+                id="profile"></a></li>
+          <li class="nav-link"> <a href="/" id="li">Home</a></li>
+          <li class="nav-link"> <a href="/courses" id="li">Courses</a></li>
+          <li class="nav-link"> <a href="/aboutus" id="li">About us</a></li>
+        </ul>
+        <div class="btn">
+          <li class="option-btn li"><a href="/login" id="btn">Login</a> </li>
+          <li class="option-btn li"><a href="/Signup" id="btn">Signup</a></li>
+          <li class="option-btn li"><a href="/admin" id="btn">Admin</a></li>
+        </div>
+       <a href="/logout"><img src="{{ url_for('static', filename='images/logout.png')}}" alt=""
+          id="logout" style="margin-right: 100px;"></a>
+    </div>
+
+
+    <div class="header">
+        <h1>About Us</h1>
+        <p>Welcome to Coding Point Classes</p>
+    </div>
+    <br>
+    <div class="container">
+        <div class="content">
+            <div class="panel">
+                <h2>Our Story</h2>
+                <p>Founded in 2015 by Om and Sanket, Coding Point Classes started as a small initiative to help local students learn the basics of programming. Over the years, we have grown into a well-respected institution, offering a wide range of courses from beginner to advanced levels.</p>
+            </div>
+            <div class="panel">
+                <h2>What We Offer</h2>
+                <p>We provide comprehensive courses in web development, data science, AI, and more. Our expert instructors and flexible learning options ensure that you get the best education possible.</p>
+            </div>
+            <div class="panel">
+                <h2>Our Vision</h2>
+                <p>Our vision is to create a world where everyone has the opportunity to learn and succeed in the field of technology. We are committed to fostering an inclusive and supportive learning environment.</p>
+            </div>
+        </div>
+        <div class="team">
+            <h2>Meet Our Team</h2>
+            <div class="member">
+                <!-- <img src="https://via.placeholder.com/150" alt="Rohan"> -->
+                <h3>Rohan Jivrag</h3>
+                <p>Co-founder and Lead Instructor</p>
+            </div>
+            <div class="member">
+                <!-- <img src="./static.images/om.jpg" alt="Om"> -->
+                <h3>Om Sirsath</h3>
+                <p>Co-founder and Lead Instructor</p>
+            </div>
+            <div class="member">
+                <!-- <img src="https://via.placeholder.com/150" alt="Sanket"> -->
+                <h3>Sanket Bhume</h3>
+                <p>Co-founder and Curriculum Designer</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
